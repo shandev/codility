@@ -8,8 +8,21 @@
 
 #include <stdio.h>
 
+int solution(int X, int Y, int D);
+
 int main(int argc, const char * argv[]) {
     // insert code here...
-    printf("Hello, World!\n");
-    return 0;
+    int a = solution(10, 85, 30);
+    return a;
 }
+
+int solution(int X, int Y, int D) {
+    // write your code in C99
+    int distance = (Y - X)/D;
+    if((Y - X)%D)
+        return distance+1;
+    else
+        return distance;
+    
+}
+
